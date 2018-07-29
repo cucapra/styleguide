@@ -148,7 +148,7 @@ main>nav {
 article {
   border-top: 2px dashed $main-color;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding-top: 0.2rem;
 
   header {
     // The header contains an anchor link with the entry's slug.
@@ -164,7 +164,9 @@ article {
     h2 {
       margin: 0;
     }
+  }
 
-    margin-bottom: -0.8rem;
+  p {
+    margin: 0.5rem 0;
   }
 }
