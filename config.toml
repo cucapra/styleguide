@@ -4,4 +4,4 @@ highlight_code = false
 build_search_index = true
 
 [extra]
-# TK custom variables
+title = "Capra Style Guide"
