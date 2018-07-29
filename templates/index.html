@@ -24,12 +24,12 @@
                 {{ section.content | safe }}
 
                 <nav>
-                    {% for page in section.pages -%}
+                    {% for page in section.pages | sort(attribute="slug") -%}
                     <a href="#{{page.slug}}">{{page.slug}}</a>
                     {%- endfor %}
                 </nav>
 
-                {% for page in section.pages -%}
+                {% for page in section.pages | sort(attribute="slug") -%}
                 <article id="{{ page.slug }}">
                     <header>
                         <a href="#{{page.slug}}">#{{ page.slug }}</a>
