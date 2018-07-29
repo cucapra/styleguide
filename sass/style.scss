@@ -142,17 +142,26 @@ ul, ol {
 // "Index"/table of contents.
 main>nav {
   margin: 1rem 0 1.5rem;
+
+  a {
+    margin-right: 0.6em;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // Entry.
 article {
   border-top: 2px dashed $main-color;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   padding-top: 0.2rem;
 
   header {
     // The header contains an anchor link with the entry's slug.
     a {
+      float: right;
       text-decoration: none;
       color: lighten(desaturate($main-color, 20.0), 30.0);
       &:hover {
@@ -162,11 +171,13 @@ article {
 
     // Entry title.
     h2 {
-      margin: 0;
+      margin: 0.3rem 0;
+      float: left;
     }
   }
 
   p {
+    clear: both;
     margin: 0.5rem 0;
   }
 }
