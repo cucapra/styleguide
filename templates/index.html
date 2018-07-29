@@ -9,7 +9,15 @@
     </head>
     <body>
         {% block content %}
+
         {{ section.content | safe }}
+
+        <nav>
+            {% for page in section.pages -%}
+            <a href="#{{page.slug}}">{{page.slug}}</a>
+            {%- endfor %}
+        </nav>
+
         {% for page in section.pages -%}
         <article id="{{ page.slug }}">
             <header>
