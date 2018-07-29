@@ -18,26 +18,28 @@
             </nav>
         </header>
         <div id="content">
-            {% block content %}
+            <main>
+                {% block content %}
 
-            {{ section.content | safe }}
+                {{ section.content | safe }}
 
-            <nav>
+                <nav>
+                    {% for page in section.pages -%}
+                    <a href="#{{page.slug}}">{{page.slug}}</a>
+                    {%- endfor %}
+                </nav>
+
                 {% for page in section.pages -%}
-                <a href="#{{page.slug}}">{{page.slug}}</a>
+                <article id="{{ page.slug }}">
+                    <header>
+                        <a href="#{{page.slug}}">#{{ page.slug }}</a>
+                        <h2>{{ page.title }}</h2>
+                    </header>
+                    {{ page.content | safe }}
+                </article>
                 {%- endfor %}
-            </nav>
-
-            {% for page in section.pages -%}
-            <article id="{{ page.slug }}">
-                <header>
-                    <a href="#{{page.slug}}">#{{ page.slug }}</a>
-                </header>
-                <h2>{{ page.title }}</h2>
-                {{ page.content | safe }}
-            </article>
-            {%- endfor %}
-            {% endblock content %}
+                {% endblock content %}
+            </main>
         </div>
     </body>
 </html>

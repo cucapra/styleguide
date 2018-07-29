@@ -138,3 +138,33 @@ ul, ol {
 }
 
 // Style guide stuff.
+
+// "Index"/table of contents.
+main>nav {
+  margin: 1rem 0 1.5rem;
+}
+
+// Entry.
+article {
+  border-top: 2px dashed $main-color;
+  margin-top: 1rem;
+  padding-top: 1rem;
+
+  header {
+    // The header contains an anchor link with the entry's slug.
+    a {
+      text-decoration: none;
+      color: lighten(desaturate($main-color, 20.0), 30.0);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    // Entry title.
+    h2 {
+      margin: 0;
+    }
+
+    margin-bottom: -0.8rem;
+  }
+}
