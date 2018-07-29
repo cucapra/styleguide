@@ -1,7 +1,7 @@
 base_url = "https://capra.cs.cornell.edu/styleguide"
 compile_sass = true
 highlight_code = false
-build_search_index = true
+build_search_index = false
 
 [extra]
 title = "Capra Style Guide"
