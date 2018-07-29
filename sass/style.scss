@@ -21,7 +21,7 @@ body {
   margin: 0;
 }
 
-header {
+body>header {
   width: 100%;
   nav {
     padding: 0.5rem 0.5rem;
@@ -42,6 +42,18 @@ header {
     @media (max-width: $small-width) {
       padding: 0 0.5rem;
     }
+  }
+
+  // Header links.
+  font-family: $display-font;
+  font-size: $display-font-size;
+  a {
+    color: $main-color;
+    text-decoration: none;
+  }
+  h1 {
+    font-size: inherit;
+    font-weight: bold;
   }
 }
 
@@ -117,7 +129,6 @@ h3, h4, h5, h6 {
   margin: 0;
 }
 
-
 // More style.
 ul {
   list-style-type: square;
@@ -126,239 +137,4 @@ ul, ol {
   padding-left: 1.3rem;
 }
 
-
-// Header links.
-header {
-  color: $main-color;
-  font-family: $display-font;
-  font-size: $display-font-size;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  h1 {
-    font-size: inherit;
-    font-weight: bold;
-  }
-}
-
-
-// Footer links.
-footer {
-  text-align: center;
-  margin: 1rem;
-  color: $disabled-color;
-  font-size: 80%;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-}
-
-
-// Figures.
-figure {
-  img {
-    width: 100%;
-    display: block;
-    margin: 0 auto 0.5rem;
-  }
-
-  figcaption {
-    font-size: 70%;
-    line-height: 120%;
-    padding: 0 0.5em;
-  }
-
-  // On larger screens, lay out in the margin.
-  float: right;
-  margin: 0 0 0 $figure-gap;
-  width: $figure-width;
-  margin-right: -($figure-width + $figure-gap);
-
-  // Lay out inside the column on smaller screens.
-  @media (max-width: $max-width + $figure-width + $figure-gap + 2rem) and
-         (min-width: $small-width + 1) {
-    margin: $figure-gap 0 $figure-gap $figure-gap;
-    float: right;
-  }
-  @media (max-width: $small-width) {
-    float: none;
-    margin: $figure-gap 0;
-    width: 100%;
-  }
-}
-
-// Inline, full-width images.
-img.large {
-  width: 130%;
-  display: block;
-  margin: 0 auto 1rem;
-
-  // By default, we exceed the column width. As the screen gets smaller, fill
-  // *only* the column width.
-  @media (max-width: $max-width + $figure-width + $figure-gap + 2rem) {
-    width: 100%;
-  }
-}
-
-// Floating, inset images.
-.flair {
-  display: block;
-  margin: 0 0 $figure-gap $figure-gap;
-  float: right;
-
-  // On really tiny screens, just inline the image.
-  @media (max-width: $tiny-width) {
-    float: none;
-    margin: $figure-gap auto;
-  }
-}
-
-// Code.
-pre {
-  background: #eee;
-  padding: 0.5em 1em;
-  overflow-x: auto;
-}
-
-// Research project listings.
-.project {
-  h3 {
-    a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  p {
-    margin-top: 0.25rem;
-  }
-}
-
-// News.
-.news {
-  h2 {
-    a.feed {
-      img {
-        width: 16px;
-        height: 16px;
-        margin-top: 2px;
-
-        // Move the icon down a bit to align with the baseline.
-        position: relative;
-        top: 2px;
-      }
-    }
-  }
-
-  article {
-    margin: 0.5rem 0;
-
-    time, .author {
-      font-family: $display-font;
-      font-size: 80%;
-      color: $disabled-color;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    // Links to blog posts.
-    p.post {
-      font-size: 120%;
-      a {
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-// Adorning some links with icons.
-@mixin adorn($icon) {
-  &::before {
-    content: "";
-    display: inline-block;
-
-    background: bottom url("/img/octicons/" + $icon + ".svg") no-repeat;
-    width: 18px;
-    height: 18px;
-
-    margin-right: 3px;
-    margin-bottom: -3px;
-  }
-}
-
-// Links to paper stuff.
-.links {
-  list-style: none;
-  padding: 0;
-}
-a.pdf {
-  @include adorn("file-text");
-}
-a.github {
-  @include adorn("mark-github");
-}
-
-// Columns for lists of people.
-$colsep: 0.8rem;
-.people {
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 100%;
-
-  margin-left: -$colsep;
-  margin-right: -$colsep;
-
-  .category {
-    max-width: 14rem;
-    padding: 0 $colsep;
-    margin-bottom: 1rem;
-
-    h3 {
-      margin: 0;
-    }
-
-    ul {
-      margin: 0;
-      list-style: none;
-      padding-left: 0;
-
-      li {
-        margin: 0.8ex 0;
-      }
-    }
-  }
-
-  .note {
-    display: inline-block;
-    color: #ccc;
-    font-size: 80%;
-  }
-}
-
-// Responsive video embed.
-// http://amobil.se/2011/11/responsive-embeds/
-.embed {
-    position: relative;
-    padding-bottom: 56.25%; /* 16/9 ratio */
-    padding-top: 30px; /* IE6 workaround*/
-    height: 0;
-    overflow: hidden;
-}
-.embed iframe,
-.embed object,
-.embed embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+// Style guide stuff.

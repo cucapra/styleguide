@@ -9,25 +9,35 @@
         <link rel="stylesheet" href="{{get_url(path="style.css", trailing_slash=false)}}">
     </head>
     <body>
-        {% block content %}
+        <header>
+            <nav>
+                <h1>
+                    <a href="/">Capra</a>
+                    Style Guide
+                </h1>
+            </nav>
+        </header>
+        <div id="content">
+            {% block content %}
 
-        {{ section.content | safe }}
+            {{ section.content | safe }}
 
-        <nav>
+            <nav>
+                {% for page in section.pages -%}
+                <a href="#{{page.slug}}">{{page.slug}}</a>
+                {%- endfor %}
+            </nav>
+
             {% for page in section.pages -%}
-            <a href="#{{page.slug}}">{{page.slug}}</a>
+            <article id="{{ page.slug }}">
+                <header>
+                    <a href="#{{page.slug}}">#{{ page.slug }}</a>
+                </header>
+                <h2>{{ page.title }}</h2>
+                {{ page.content | safe }}
+            </article>
             {%- endfor %}
-        </nav>
-
-        {% for page in section.pages -%}
-        <article id="{{ page.slug }}">
-            <header>
-                <a href="#{{page.slug}}">#{{ page.slug }}</a>
-            </header>
-            <h2>{{ page.title }}</h2>
-            {{ page.content | safe }}
-        </article>
-        {%- endfor %}
-        {% endblock content %}
+            {% endblock content %}
+        </div>
     </body>
 </html>
