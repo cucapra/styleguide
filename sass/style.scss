@@ -153,6 +153,10 @@ code {
 
 // Style guide stuff.
 
+main>p:first-child {
+    margin-top: 0;
+}
+
 // "Index"/table of contents.
 main>nav {
   margin: 1rem 0 1.5rem;
