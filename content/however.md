@@ -2,7 +2,7 @@
 title = "however"
 +++
 *However* and similar words aren’t conjunctions, so *foo, however bar* is a
-[comma splice](https://owl.english.purdue.edu/engagement/2/1/34/).
+[comma splice][cs].
 Try instead:
 
 > foo. However, bar
@@ -10,3 +10,5 @@ Try instead:
 Or:
 
 > foo; however, bar
+
+[cs]: https://writing.wisc.edu/Handbook/CommonErrors_CommaSplice.html
