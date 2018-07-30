@@ -24,9 +24,9 @@
                 {{ section.content | safe }}
 
                 <nav>
-                    {% for page in section.pages | sort(attribute="slug") -%}
+                    {% for page in section.pages | sort(attribute="slug") %}
                     <a href="#{{page.slug}}">{{page.slug}}</a>
-                    {%- endfor %}
+                    {% endfor %}
                 </nav>
 
                 {% for page in section.pages | sort(attribute="slug") -%}
