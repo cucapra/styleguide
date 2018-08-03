@@ -1,5 +1,5 @@
 +++
-title = "en dash (–)"
+title = "en dash"
 +++
 In TeX, two hyphens (`--`) become an en dash (–).
 

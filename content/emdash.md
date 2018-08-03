@@ -1,5 +1,5 @@
 +++
-title = "em dash (—)"
+title = "em dash"
 +++
 In TeX, three hyphens (`---`) become an em dash (—).
 
