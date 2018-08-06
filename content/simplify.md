@@ -11,7 +11,8 @@ Here are some find/replace patterns for simplifying language:
 - *is built on* → *builds on*
 - *it is observed that X* → just *X* or, if necessary, *we observe that X*
 - *in order to* → *to*
-- *as it can be seen from the figure, X* → *the figure shows that X* or just *X*
+- *as can be seen in the figure, X* → *the figure shows that X* or just *X*
 - *has the potential to* → *could*
 - *a sufficient amount of* → *enough*
 - *utilize* → *use*
+- *note that X* → *X*
