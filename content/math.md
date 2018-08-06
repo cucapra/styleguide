@@ -12,7 +12,7 @@ Use this TeX syntax to use display-mode math in the flow of prose:
     More explanation here.
 
 That is, use an empty TeX comment line (`%`) to avoid starting a new paragraph while still making the TeX look readable.
-And be sure to use display-mode math delimiters like `\[ x \]` or `$$ x $$`.
+And be sure to use display-mode math macros like `\[ x \]` or `align*`.
 
 The text leading up to the math should give enough context so that the reader knows why they are about to see an equation.
 It should call out the key insight they should look for while trying to understand the math.
