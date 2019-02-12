@@ -5,12 +5,12 @@
 # pages are unnecessary.
 site:
 	rm -rf public
-	gutenberg build
+	zola build
 	rm -r $(shell echo public/*/)
 	rm public/sitemap.xml
 
 serve:
-	gutenberg serve
+	zola serve
 
 # Deployment.
 RSYNCARGS := --compress --recursive --checksum --itemize-changes \
