@@ -1,7 +1,7 @@
 +++
 title = "however"
 +++
-*However* and similar words aren’t conjunctions, so *foo, however bar* is a
+*However* and similar words are not conjunctions, so *foo, however bar* is a
 [comma splice][cs].
 Try instead:
 
