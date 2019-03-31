@@ -16,3 +16,4 @@ Here are some find/replace patterns for simplifying language:
 - *a sufficient amount of* → *enough*
 - *utilize* → *use*
 - *note that X* → *X*
+- *it is worth noting that X* → *X*
