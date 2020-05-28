@@ -11,4 +11,4 @@ Or:
 
 > foo; however, bar
 
-[cs]: https://writing.wisc.edu/Handbook/CommonErrors_CommaSplice.html
+[cs]: https://writing.wisc.edu/handbook/grammarpunct/commonerrors/
