@@ -7,6 +7,7 @@ Here are some find/replace patterns for simplifying language:
 
 - *which means that* → *so*
 - *gives X the ability to* → *lets X*
+- *allows X to* → *lets X*
 - *is different* → *differs*
 - *is built on* → *builds on*
 - *it is observed that X* → just *X* or, if necessary, *we observe that X*
