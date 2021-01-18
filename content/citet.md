@@ -1,15 +1,15 @@
 +++
-title = "Citation as nouns"
+title = "citation as nouns"
 +++
 
-Citation are not nouns. For example, this is incorrect:
+Citation are not nouns. For example, this is wrong:
 
-- *We build upon the work of [32]*.
+- *We build on the work of [32].*
 
-The proper way is to either name the system or the authors:
+The right way is to either name the system or the authors:
 
-- *We build upon Terra [32]*.
-- *We build upon the work of Cookie Monster et al. [32]*.
+- *We build on Terra [32].*
+- *We build on the work of Cookie Monster et al. [32].*
 
 The [natbib][] package for LaTeX defines the `\citet` macro which automatically
 adds the names of the authors and the citation.
