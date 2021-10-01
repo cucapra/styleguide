@@ -11,4 +11,4 @@ For more good advice, see [Eddie Kohler][ek]’s [LaTeX usage notes][eklatex] or
 [ek]: http://www.read.seas.harvard.edu/~kohler/
 [eklatex]: http://www.read.seas.harvard.edu/~kohler/latex.html
 [clg]: https://clairelegoues.com
-[clgwriting]: https://clairelegoues.com/2016/08/23/things-i-keep-repeating-about-writing/
+[clgwriting]: https://clairelegoues.com/posts/clg-writing-rules.html
